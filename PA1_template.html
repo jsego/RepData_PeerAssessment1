@@ -348,7 +348,12 @@ curve(dnorm(x, mean=mean(fillbydate$steps), sd=sd(fillbydate$steps)),
 <p><em>The first thing we do is to set the local time to &ldquo;C&rdquo; to produce weekdays in English, because by default it produces the days in Spanish for our case. After that, we create a set weekend to check if the name of the day is in weekend or not, then we produce a boolean vector checking if all the days in the dataset fillact are weekends or not, and we follow using this boolean vector to create a new vector with all the True values to &ldquo;weekend&rdquo; and False values to &ldquo;weekday&rdquo;. Once we have this vector we create a new factor variable with that vector, where the 2 levels are &ldquo;weekday&rdquo; and &ldquo;weekend&rdquo;, and finally we bind this vector to the data table fillact as a new column and print the head info to check if it is ok.</em></p>
 
 <pre><code class="r">library(data.table)
-Sys.setlocale(&quot;LC_TIME&quot;,&quot;C&quot;)
+</code></pre>
+
+<pre><code>## data.table 1.9.2  For help type: help(&quot;data.table&quot;)
+</code></pre>
+
+<pre><code class="r">Sys.setlocale(&quot;LC_TIME&quot;,&quot;C&quot;)
 </code></pre>
 
 <pre><code>## [1] &quot;C&quot;
